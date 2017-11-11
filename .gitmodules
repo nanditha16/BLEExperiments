@@ -1,4 +1,0 @@
-[submodule "SimpleBLECentral/BlueCap"]
-	path = SimpleBLECentral/BlueCap
-	url = https://github.com/troystribling/BlueCap.git
-	branch = master
