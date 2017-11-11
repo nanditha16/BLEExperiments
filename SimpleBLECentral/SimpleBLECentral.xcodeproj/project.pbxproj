@@ -15,6 +15,10 @@
 		AD6922ED1FB6BB08008712EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6922EB1FB6BB08008712EB /* LaunchScreen.storyboard */; };
 		AD6922F81FB6BB08008712EB /* SimpleBLECentralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6922F71FB6BB08008712EB /* SimpleBLECentralTests.swift */; };
 		AD6923031FB6BB08008712EB /* SimpleBLECentralUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6923021FB6BB08008712EB /* SimpleBLECentralUITests.swift */; };
+		AD69231C1FB6BF28008712EB /* BlueCapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD69231B1FB6BE9C008712EB /* BlueCapKit.framework */; };
+		AD69231D1FB6BF28008712EB /* BlueCapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD69231B1FB6BE9C008712EB /* BlueCapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD6923261FB6BFE4008712EB /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6923241FB6BFA1008712EB /* CoreBluetooth.framework */; };
+		AD6923271FB6BFEB008712EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6923251FB6BFA1008712EB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +36,42 @@
 			remoteGlobalIDString = AD6922DB1FB6BB07008712EB;
 			remoteInfo = SimpleBLECentral;
 		};
+		AD6923141FB6BE9A008712EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD6923101FB6BE99008712EB /* BlueCapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0551208219F5506000ED3B74;
+			remoteInfo = BlueCapKit;
+		};
+		AD69231A1FB6BE9C008712EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD6923161FB6BE9C008712EB /* BlueCapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0551208219F5506000ED3B74;
+			remoteInfo = BlueCapKit;
+		};
+		AD69231E1FB6BF28008712EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD6923161FB6BE9C008712EB /* BlueCapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0551208119F5506000ED3B74;
+			remoteInfo = BlueCapKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD6923201FB6BF28008712EB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AD69231D1FB6BF28008712EB /* BlueCapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AD6922DC1FB6BB07008712EB /* SimpleBLECentral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBLECentral.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +88,10 @@
 		AD6922FE1FB6BB08008712EB /* SimpleBLECentralUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleBLECentralUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6923021FB6BB08008712EB /* SimpleBLECentralUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBLECentralUITests.swift; sourceTree = "<group>"; };
 		AD6923041FB6BB08008712EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD6923101FB6BE99008712EB /* BlueCapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueCapKit.xcodeproj; path = BlueCap/BlueCapKit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		AD6923161FB6BE9C008712EB /* BlueCapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BlueCapKit.xcodeproj; sourceTree = "<group>"; };
+		AD6923241FB6BFA1008712EB /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		AD6923251FB6BFA1008712EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6923271FB6BFEB008712EB /* CoreLocation.framework in Frameworks */,
+				AD6923261FB6BFE4008712EB /* CoreBluetooth.framework in Frameworks */,
+				AD69231C1FB6BF28008712EB /* BlueCapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +125,12 @@
 		AD6922D31FB6BB07008712EB = {
 			isa = PBXGroup;
 			children = (
+				AD6923161FB6BE9C008712EB /* BlueCapKit.xcodeproj */,
 				AD6922DE1FB6BB07008712EB /* SimpleBLECentral */,
 				AD6922F61FB6BB08008712EB /* SimpleBLECentralTests */,
 				AD6923011FB6BB08008712EB /* SimpleBLECentralUITests */,
 				AD6922DD1FB6BB07008712EB /* Products */,
+				AD6923231FB6BFA1008712EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +147,7 @@
 		AD6922DE1FB6BB07008712EB /* SimpleBLECentral */ = {
 			isa = PBXGroup;
 			children = (
+				AD6923101FB6BE99008712EB /* BlueCapKit.xcodeproj */,
 				AD6922DF1FB6BB07008712EB /* AppDelegate.swift */,
 				AD6922E11FB6BB07008712EB /* ViewController.swift */,
 				AD6922E31FB6BB07008712EB /* Main.storyboard */,
@@ -128,6 +177,31 @@
 			path = SimpleBLECentralUITests;
 			sourceTree = "<group>";
 		};
+		AD6923111FB6BE99008712EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD6923151FB6BE9A008712EB /* BlueCapKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD6923171FB6BE9C008712EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD69231B1FB6BE9C008712EB /* BlueCapKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD6923231FB6BFA1008712EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD6923241FB6BFA1008712EB /* CoreBluetooth.framework */,
+				AD6923251FB6BFA1008712EB /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +212,12 @@
 				AD6922D81FB6BB07008712EB /* Sources */,
 				AD6922D91FB6BB07008712EB /* Frameworks */,
 				AD6922DA1FB6BB07008712EB /* Resources */,
+				AD6923201FB6BF28008712EB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AD69231F1FB6BF28008712EB /* PBXTargetDependency */,
 			);
 			name = SimpleBLECentral;
 			productName = SimpleBLECentral;
@@ -221,6 +297,16 @@
 			mainGroup = AD6922D31FB6BB07008712EB;
 			productRefGroup = AD6922DD1FB6BB07008712EB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AD6923171FB6BE9C008712EB /* Products */;
+					ProjectRef = AD6923161FB6BE9C008712EB /* BlueCapKit.xcodeproj */;
+				},
+				{
+					ProductGroup = AD6923111FB6BE99008712EB /* Products */;
+					ProjectRef = AD6923101FB6BE99008712EB /* BlueCapKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AD6922DB1FB6BB07008712EB /* SimpleBLECentral */,
@@ -229,6 +315,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AD6923151FB6BE9A008712EB /* BlueCapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BlueCapKit.framework;
+			remoteRef = AD6923141FB6BE9A008712EB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AD69231B1FB6BE9C008712EB /* BlueCapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BlueCapKit.framework;
+			remoteRef = AD69231A1FB6BE9C008712EB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AD6922DA1FB6BB07008712EB /* Resources */ = {
@@ -296,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = AD6922DB1FB6BB07008712EB /* SimpleBLECentral */;
 			targetProxy = AD6922FF1FB6BB08008712EB /* PBXContainerItemProxy */;
+		};
+		AD69231F1FB6BF28008712EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueCapKit;
+			targetProxy = AD69231E1FB6BF28008712EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -429,10 +537,12 @@
 		AD6923081FB6BB08008712EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RC78TSH6BQ;
 				INFOPLIST_FILE = SimpleBLECentral/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ble.ios.SimpleBLECentral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,10 +554,12 @@
 		AD6923091FB6BB08008712EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RC78TSH6BQ;
 				INFOPLIST_FILE = SimpleBLECentral/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ble.ios.SimpleBLECentral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
